@@ -2,6 +2,7 @@ import React from 'react';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { LoginView } from '../login-view/login-view';
+import { RegisterView } from '../register-view/register-view';
 import axios from 'axios';
 class MainView extends React.Component {
     constructor() {
@@ -9,8 +10,9 @@ class MainView extends React.Component {
         this.state = {
             movies: [],
             selectedMovie: null,
-            user: null
-          };
+            user: null,
+            register: null
+        };
     }
     componentDidMount() {
         axios.get('https://yourmoviescollection.herokuapp.com/movies')
@@ -31,12 +33,18 @@ class MainView extends React.Component {
     }
     onLoggedIn(user) {
         this.setState({
-          user
+            user
         });
-      }
+    }
+    onRegistering(register) {
+        this.setState({
+            register
+        });
+    }
     render() {
-        const { movies, selectedMovie, user } = this.state;
-        
+        const { movies, selectedMovie, user, register } = this.state;
+
+        if (!register) return <RegisterView onRegistering={(register) => this.onRegistering(register)} />
         if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
 
         if (movies.length === 0) return <div className="main-view" />;
