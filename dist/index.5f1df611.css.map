@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;;AEEA","sources":["src/components/movie-view/movie-view.scss","src/components/main-view/main-view.scss","src/index.scss"],"sourcesContent":[".movie-view {\n    background-color: aqua;\n}",null,"$color: steelblue;\n\n.my-flix {\n    color: $color;\n}"],"names":[],"version":3,"file":"index.5f1df611.css.map","sourceRoot":"/__parcel_source_root/"}
