@@ -1,8 +1,26 @@
-.movie-poster {
-    margin-bottom: 15px;
-    text-align: center;
+.movie-view {
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-between;
 }
 
-button {
-    margin-top: 15px;
+.movie-poster {
+    margin: 0;
+    width: 35%;
+}
+
+.poster {
+    max-width: 100%;
+}
+
+.movie-body {
+    width: 60%;
+}
+
+.label {
+    padding-right: 10px;
+}
+
+.back-button {
+    margin-top: 40px;
 }
