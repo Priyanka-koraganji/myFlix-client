@@ -1,8 +1,73 @@
 .movie-view {
-  background-color: #0ff;
+  justify-content: space-between;
+  margin-top: 20vh;
+  display: flex;
+}
+
+.movie-poster {
+  width: 35%;
+  margin: 0;
+}
+
+.poster {
+  max-width: 100%;
+}
+
+.movie-body {
+  width: 60%;
+}
+
+.label {
+  padding-right: 10px;
+}
+
+.back-button {
+  margin-top: 40px;
+}
+
+.login-view {
+  margin-top: 20vh;
+}
+
+h2 {
+  text-align: center;
+}
+
+.register-view {
+  margin-top: 20vh;
+}
+
+h2 {
+  text-align: center;
 }
 
 
+
+.genre-view {
+  margin-top: 20vh;
+}
+
+.director-view {
+  margin-top: 20vh;
+}
+
+.edit {
+  justify-content: space-between;
+  display: flex;
+}
+
+.movie-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-img {
+  height: 250px;
+}
+
+.card-title {
+  font-weight: lighter;
+}
 
 .my-flix {
   color: #4682b4;
