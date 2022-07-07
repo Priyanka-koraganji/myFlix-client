@@ -12,7 +12,7 @@ import { MovieView } from '../movie-view/movie-view';
 import { LoginView } from '../login-view/login-view';
 import { RegisterView } from '../register-view/register-view';
 import { Row, Col, Navbar } from 'react-bootstrap';
-import { Navbar } from '../navbar/navbar';
+import { NavBar } from '../navbar/navbar';
 import { GenreView } from '../genre-view/genre-view';
 import { DirectorView } from '../Director-View/director-view';
 import { ProfileView } from '../profile-view/profile-view';
@@ -68,7 +68,7 @@ class MainView extends React.Component {
         let { movies, user } = this.props;
         return (
             <Router>
-                <Navbar user={user} />
+                <NavBar user={user} />
 
                 <Row className="main-view justify-content-md-center">
                     <Route exact path="/" render={() => {
