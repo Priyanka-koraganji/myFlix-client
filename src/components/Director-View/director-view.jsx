@@ -10,7 +10,7 @@ export const DirectorView = (props) => {
                 <Card.Body className='card-body'>
                     <Card.Title>{props.director.Name}</Card.Title>
                     <Card.Text>{props.director.Bio}</Card.Text>
-                    <button onClick={() => { props.onBackClick(); }}>Back</button>
+                    <Button onClick={() => { props.onBackClick(); }}>Back</Button>
                 </Card.Body>
             </Card>
         </>

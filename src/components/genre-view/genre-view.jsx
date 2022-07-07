@@ -6,11 +6,10 @@ export const GenreView = (props) => {
     return (
         <>
             <Card className='genre-view'>
-
                 <Card.Body className='card-body'>
                     <Card.Title>{props.genre.Name}</Card.Title>
                     <Card.Text>{props.genre.Description}</Card.Text>
-                    <button onClick={() => { props.onBackClick(); }}>Back</button>
+                    <Button variant="primary" onClick={() => { props.onBackClick(); }}>Back</Button>
                 </Card.Body>
             </Card>
         </>
