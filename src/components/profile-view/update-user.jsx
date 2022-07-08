@@ -73,26 +73,26 @@ export function UpdateUser(props) {
         <>
             <h2>Edit profile</h2>
             <Row id="update-form">
-                <Col sm="10" md="8" lg="6">
+                <Col sm="10" md="12" lg="12">
                     <Form>
                         <Form.Group controlId="formUsername">
                             <Form.Label>Username:</Form.Label>
-                            <Form.Control type="text" defaultValue={username} onChange={e => setUsername(e.target.value)} placeholder="Username" required />
+                            <Form.Control type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder={user.Username} required />
                             {values.usernameErr && <p>{values.usernameErr}</p>}
                         </Form.Group>
                         <Form.Group controlId="formPassword">
                             <Form.Label>Password:</Form.Label>
-                            <Form.Control type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required />
+                            <Form.Control type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder='****' required />
                             {values.passwordErr && <p>{values.passwordErr}</p>}
                         </Form.Group>
                         <Form.Group controlId="formEmail">
                             <Form.Label>Password:</Form.Label>
-                            <Form.Control type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="your@mail.com" required />
+                            <Form.Control type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder={user.Email} required />
                             {values.emailErr && <p>{values.emailErr}</p>}
                         </Form.Group>
                         <Form.Group controlId="formBirthday">
                             <Form.Label>Password:</Form.Label>
-                            <Form.Control type="text" value={birthday} onChange={e => setBirthday(e.target.value)} placeholder="YYYY-MM-DD" />
+                            <Form.Control type="text" value={birthday} onChange={e => setBirthday(e.target.value)} placeholder={user.Birthday} />
                         </Form.Group>
                         <Form.Group controlId="formBirthday" className="mt-3 edit">
                             <Button className="edit-button" variant="warning" type="submit" onClick={handleSubmit}>Edit Profile</Button>
