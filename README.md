@@ -9,7 +9,7 @@ You can view different Movies, where you have different routues for specific mov
 The application uses a build tool called Parcel. 
 
 API the project uses: https://yourmoviescollection.herokuapp.com/
-Hoisted using Netlify: 
+Hoisted using Netlify: https://priyas-moviessite.netlify.app/
 
 How to run: parcel src/index.html
 
