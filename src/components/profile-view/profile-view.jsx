@@ -41,17 +41,23 @@ export function ProfileView(props) {
 
     return (
         <Container id="profile-form">
-            <Row>
-                <Col md={6}>
+            <Row className='user'>
+                <Col className='user-info' xs={12} md={6}>
                     <UserInfo user={user} />
                 </Col>
-                <Col md={6}>
+                <Col className='user-info' xs={12} md={6}>
                     <UpdateUser user={user} handleDelete={handleDelete} />
                 </Col>
             </Row>
 
-            <Row className="mt-5"><h2>Your favourite movies</h2></Row>
-            <Row className="mt-3">
+            <Row className="mt-5 ">
+                <Col></Col>
+                <Col>
+                    <h2>Your favourite movies</h2>
+                </Col>
+                <Col></Col>
+            </Row>
+            <Row className="mt-3 user">
                 <FavoriteMovies
                     movies={props.movies}
                     favoriteMovies={favoriteMovies}
