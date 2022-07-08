@@ -21,6 +21,39 @@
     padding-right: 10px;
 }
 
-.back-button {
-    margin-top: 40px;
+.movie-view {
+    background: #817474;
+    padding: 30px;
+    color: white;
+
+    .genre-link {
+        color: rgb(215, 204, 204);
+    }
+
+    .director-link {
+        color: rgb(215, 204, 204);
+    }
+
+    .buttons {
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .back-button {
+        margin-top: 40px;
+        padding: 5px 25px;
+    }
+
+    .Fav-button {
+        margin-top: 40px;
+        padding: 5px 25px;
+    }
+
+    .movie-poster {
+        border: 1px solid white;
+        height: 250px;
+    }
+
+
 }

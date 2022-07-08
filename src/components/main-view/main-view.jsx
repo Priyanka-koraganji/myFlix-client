@@ -76,11 +76,6 @@ class MainView extends React.Component {
                             <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
                         </Col>
                         if (movies.length === 0) return <div className="main-view" />;
-                        // return movies.map(m => (
-                        //     <Col md={3} key={m._id}>
-                        //         <MovieCard movie={m} />
-                        //     </Col>
-                        //))
                         return <MoviesList movies={movies} />;
                     }} />
                     <Route path="/register" render={() => {
@@ -96,7 +91,7 @@ class MainView extends React.Component {
                         </Col>
                         if (movies.length === 0) return <div className="main-view" />;
                         return <Col md={8}>
-                            <MovieView movie={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} />
+                            <MovieView movie={movies.find(m => m._id === match.params.movieId)} user={user} onBackClick={() => history.goBack()} />
                         </Col>
                     }} />
 

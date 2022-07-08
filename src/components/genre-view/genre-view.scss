@@ -1,3 +1,13 @@
 .genre-view {
     margin-top: 20vh;
+    padding: 30px;
+
+    .back-button {
+        padding: 5px 25px;
+    }
+}
+
+.genre-view:hover {
+    background-color: #817474;
+    color: white;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Form,Button, Col, Container, Row } from 'react-bootstrap';
+import { Form, Button, Col, Container, Row } from 'react-bootstrap';
 
-export function UserInfo({user}) {
+export function UserInfo({ user }) {
     return (
         <>
             <h2>Your Info</h2>
@@ -22,7 +22,7 @@ export function UserInfo({user}) {
                     <Col className="label">Birthday:</Col>
                     <Col className="value">{user.Birthday}</Col>
                 </Row>
-                </Form>
+            </Form>
         </>
     )
 }
