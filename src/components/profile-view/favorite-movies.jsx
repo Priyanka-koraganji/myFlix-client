@@ -40,19 +40,19 @@ export function FavoriteMovies(props) {
                 favoriteMoviesList.map((movie) => {
                     return (
                         <Col xs={10} sm={8} md={6} lg={4} >
-                            <Card id="movie-card">
+                            <Card className="movie-card">
                                 <Link to={`/movies/${movie._id}`}>
-                                    <Card.Img variant="top" src={movie.ImagePath} />
+                                    <Card.Img className='card-img' variant="top" src={movie.ImagePath} />
                                 </Link>
-                                <Card.Body>
+                                <Card.Body className='body'>
                                     <Card.Title>{movie.Title}</Card.Title>
                                     <Card.Text>{movie.Description}</Card.Text>
                                     <Link to={`/movies/${movie._id}`}>
-                                        <Button className="button" variant="outline-primary" size="sm">Open</Button>
+                                        <Button className="button details-button" variant="outline-warning" size="sm">Open</Button>
                                     </Link>
                                     <Button
-                                        className="button ml-2"
-                                        variant="outline-primary"
+                                        className="button ml-2 details-button"
+                                        variant="outline-warning"
                                         size="sm" onClick={() => { handleMovieDelete(movie._id) }} >
                                         Remove
                                     </Button>

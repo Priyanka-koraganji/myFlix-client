@@ -19,7 +19,7 @@ export const NavBar = (props) => {
     }
     return (
 
-        <Navbar className="main-nav" bg="dark" sticky="top" variant="dark" expand="lg">
+        <Navbar className="main-nav" variant="dark" sticky="top" expand="lg">
             <Container>
                 <Navbar.Brand className="navbar-logo" href="/">myFlixCinema</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -35,7 +35,7 @@ export const NavBar = (props) => {
                             <Button variant="link"><Nav.Link href={`/users/${props.user}`}>Profile</Nav.Link></Button>
                         )} */}
                         {isAuth() && (
-                            <Button variant="link" onClick={() => { onLoggedOut() }}>Logout</Button>
+                            <Button variant="link" className="navbar-logout" onClick={() => { onLoggedOut() }}>Logout</Button>
                         )}
                         {!isAuth() && (
                             <Button variant="link"><Nav.Link href='/'>Sign-in</Nav.Link></Button>
