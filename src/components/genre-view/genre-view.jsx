@@ -9,7 +9,7 @@ export const GenreView = (props) => {
                 <Card.Body className='card-body'>
                     <Card.Title>{props.genre.Name}</Card.Title>
                     <Card.Text>{props.genre.Description}</Card.Text>
-                    <Button variant="primary" onClick={() => { props.onBackClick(); }}>Back</Button>
+                    <Button variant="danger" className='back-button' onClick={() => { props.onBackClick(); }}>Back</Button>
                 </Card.Body>
             </Card>
         </>
