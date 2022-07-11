@@ -2,31 +2,57 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './movie-view.scss';
 import { Link } from "react-router-dom";
-import { Button, Figure, Card, Image } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import axios from 'axios';
 
 export class MovieView extends React.Component {
-
+    constructor() {
+        super()
+        this.state = {
+            userData: ''
+        }
+    }
     keypressCallback(event) {
         console.log(event.key);
     }
     FavMovie = () => {
         const token = localStorage.getItem('token');
         const { user, movie } = this.props;
-        console.log(movie._id);
+        //let movieid = userData.FavoriteMovies.find(id => id === movie._id);
+        // if (!movieid) {
         axios.post(`https://yourmoviescollection.herokuapp.com/users/${user}/movies/${movie._id}`, {},
             {
                 headers: { Authorization: `Bearer ${token}` }
             })
             .then(res => {
                 console.log(res);
+                window.open(`/users/${user}`, '_self');
             })
             .catch(err => {
                 console.log(err);
             })
+        // }
     }
     componentDidMount() {
+        console.log('did mount');
         document.addEventListener('keypress', this.keypressCallback);
+        const token = localStorage.getItem('token');
+        const { user } = this.props;
+        axios.get(`https://yourmoviescollection.herokuapp.com/users/${user}`,
+            {
+                headers: { Authorization: `Bearer ${token}` }
+            })
+            .then(res => {
+                console.log(res);
+                this.setState({
+                    userData: res.data
+                })
+
+            })
+            .catch(err => {
+                console.log(err);
+            })
+
     }
 
     componentWillUnmount() {
@@ -34,10 +60,11 @@ export class MovieView extends React.Component {
     }
     render() {
         const { movie, onBackClick, user } = this.props;
-
+        const userData = this.state.userData;
+        console.log(userData);
+        //let movieid = userData.FavoriteMovies.find(id => id === movie._id);
         return (
             <>
-
                 <div className="movie-view">
                     <div className='movie-body'>
                         <div className="movie-title">
@@ -61,7 +88,14 @@ export class MovieView extends React.Component {
                         </div>
                         <div className='buttons'>
                             <Button className="back-button" variant="danger" onClick={() => { onBackClick(); }}>Back</Button>
-                            <Button className="Fav-button" variant="danger" onClick={this.FavMovie}>Add to Favorites</Button>
+                            {userData ?
+                                (userData.FavoriteMovies.find(id => id === movie._id)) ?
+                                    '' :
+                                    <Button className="Fav-button" variant="danger" onClick={this.FavMovie}>Add to Favorites</Button> : ''
+                            }
+
+
+
                         </div>
                     </div>
                     <img className="movie-poster" src={movie.ImagePath} />
