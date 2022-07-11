@@ -20,32 +20,24 @@ import { ProfileView } from '../profile-view/profile-view';
 
 
 class MainView extends React.Component {
-    constructor() {
-        super();
-        // this.state = {
-        //     user: null
-        // };
-    }
 
     componentDidMount() {
         let accessToken = localStorage.getItem('token');
         if (accessToken !== null) {
-            // this.setState({
-            //     user: localStorage.getItem('user')
-            // });
             this.props.setUser(localStorage.getItem('user'));
             this.getMovies(accessToken);
         }
     }
 
     onLoggedIn(authData) {
-        console.log(authData);
-        // this.setState({
-        //     user: authData.user.Username
-        // });
+        console.log(authData.user);
+        this.setState({
+            Data: authData
+        });
         this.props.setUser(authData.user.Username);
         localStorage.setItem('token', authData.token);
         localStorage.setItem('user', authData.user.Username);
+        localStorage.setItem('data', authData.user);
         this.getMovies(authData.token);
     }
     getMovies(token) {
@@ -53,10 +45,6 @@ class MainView extends React.Component {
             headers: { Authorization: `Bearer ${token}` }
         })
             .then(response => {
-                // Assign the result to the state
-                // this.setState({
-                //     movies: response.data
-                // });
                 this.props.setMovies(response.data);
             })
             .catch(function (error) {
