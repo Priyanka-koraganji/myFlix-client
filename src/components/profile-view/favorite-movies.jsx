@@ -27,7 +27,7 @@ export function FavoriteMovies(props) {
         })
             .then(() => {
                 alert(`The movie was successfully deleted.`)
-                window.open('/users/:username', '_self');
+                window.open(`/users/${currentUser}`, '_self');
             }).
             catch(error => console.error(error))
     }
