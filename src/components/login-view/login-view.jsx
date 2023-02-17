@@ -11,7 +11,7 @@ export function LoginView(props) {
     const [usernameErr, setUsernameErr] = useState('');
     const [passwordErr, setPasswordErr] = useState('');
 
-    // validate user inputs
+    /** validate user inputs */ 
     const validate = () => {
         let isReq = true;
         if (!username) {
@@ -36,7 +36,7 @@ export function LoginView(props) {
         e.preventDefault();
         const isReq = validate();
         if (isReq) {
-            /* Send request to the server for authentication */
+            /** Send request to the server for authentication */ 
             axios.post('https://yourmoviescollection.herokuapp.com/login', {
                 Username: username,
                 Password: password
