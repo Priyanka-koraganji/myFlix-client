@@ -10,16 +10,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Priyanka-koraganji/myFlix-client/issues"
-  },
   "homepage": "https://Priyanka-koraganji.github.io/myFlix-client",
   "dependencies": {
     "axios": "^0.27.2",
     "gh-pages": "^5.0.0",
-    "parcel": "^2.6.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
@@ -31,7 +25,6 @@
     "redux-devtools-extension": "^2.13.9"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.6.2",
     "buffer": "^6.0.3",
     "process": "^0.11.10"
   },
