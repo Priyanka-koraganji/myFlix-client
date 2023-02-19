@@ -1,0 +1,170 @@
+.movie-view {
+  justify-content: space-between;
+  margin-top: 20vh;
+  display: flex;
+}
+
+.movie-poster {
+  width: 35%;
+  margin: 0;
+}
+
+.poster {
+  max-width: 100%;
+}
+
+.movie-body {
+  width: 60%;
+}
+
+.label {
+  padding-right: 10px;
+}
+
+.movie-view {
+  color: #fff;
+  background: #817474;
+  padding: 30px;
+}
+
+.movie-view .genre-link, .movie-view .director-link {
+  color: #d7cccc;
+}
+
+.movie-view .buttons {
+  justify-content: space-between;
+  display: flex;
+}
+
+.movie-view .back-button, .movie-view .Fav-button {
+  margin-top: 40px;
+  padding: 5px 25px;
+}
+
+.movie-view .movie-poster {
+  height: 250px;
+  border: 1px solid #fff;
+}
+
+.login-view {
+  margin-top: 20vh;
+}
+
+.login-view h2 {
+  text-align: center;
+}
+
+.register-view {
+  margin-top: 20vh;
+}
+
+.register-view h2 {
+  text-align: center;
+}
+
+.main-nav {
+  color: #f5f5f5;
+  background-color: #817474;
+}
+
+.main-nav .navbar-logout {
+  color: #f5f5f5;
+}
+
+.main-nav .navbar-logout:hover {
+  color: #fff;
+}
+
+.main-nav .navbar-logo:hover {
+  color: red;
+}
+
+.genre-view {
+  margin-top: 20vh;
+  padding: 30px;
+}
+
+.genre-view .back-button {
+  padding: 5px 25px;
+}
+
+.genre-view:hover {
+  color: #fff;
+  background-color: #817474;
+}
+
+.director-view {
+  margin-top: 20vh;
+  padding: 30px;
+}
+
+.director-view .back-button {
+  padding: 5px 25px;
+}
+
+.director-view:hover {
+  color: #fff;
+  background-color: #817474;
+}
+
+#profile-form {
+  margin-top: 10vh;
+}
+
+#profile-form h2 {
+  text-align: center;
+}
+
+.edit {
+  justify-content: space-between;
+  display: flex;
+}
+
+.user {
+  border: 1px solid #6d2929;
+  margin: 10px 0;
+}
+
+.user-info {
+  padding: 20px;
+}
+
+.movie-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.movie-card .card-img {
+  height: 250px;
+}
+
+.movie-card .moviecard-body {
+  height: 120px;
+}
+
+.movie-card .body {
+  height: 250px;
+}
+
+.movie-card .details-button {
+  padding: 5px 15px;
+}
+
+.movie-card .details-button:hover, .movie-card .details-button:focus {
+  box-shadow: 0 .5em .5em -.4em var(--hover);
+  transform: translateY(-.25em);
+}
+
+.movie-card:hover {
+  color: #fff;
+  background: #817474;
+  animation: popBackground .3s ease-in;
+  transform: scale(1.025);
+  box-shadow: 0 5px 10px #e508083d;
+}
+
+.my-flix {
+  color: #4682b4;
+}
+
+/*# sourceMappingURL=index.5f1df611.css.map */
